@@ -293,10 +293,12 @@ def execute_command(command):
         return
 
     if command[0] == "go":
-        if len(command) > 1:
-            execute_go(command[1])
-        else:
-            print("Go where?")
+        for x in current_room["exits"]:
+            if x == command[1]:
+                if len(command) > 1:
+                    execute_go(command[1])
+                else:
+                    print("Go where?")
 
     elif command[0] == "take":
         if len(command) > 1:
