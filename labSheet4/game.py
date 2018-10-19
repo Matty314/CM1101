@@ -221,7 +221,6 @@ def main():
 
         # What are the possible exits from the current room?
         exits = current_room["exits"]
-        pass
 
         # Show the menu with exits and ask the player
         direction = menu(exits)
